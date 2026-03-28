@@ -61,3 +61,40 @@ section {
   color: white;
   text-align: center;
 }
+
+/* HAMBURGER MENU */
+.menu-toggle {
+  display: block;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#nav-links {
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+#nav-links a {
+  padding: 10px 0;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* DESKTOP NAV */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  #nav-links {
+    display: flex !important;
+    flex-direction: row;
+    width: auto;
+    margin-top: 0;
+  }
+
+  #nav-links a {
+    border: none;
+  }
+}
