@@ -10,7 +10,13 @@
 <script>
 function toggleMenu() {
   const nav = document.getElementById("nav-links");
-  nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+  if (!nav) return;
+
+  if (getComputedStyle(nav).display === "none") {
+    nav.style.display = "flex";
+  } else {
+    nav.style.display = "none";
+  }
 }
 </script>
 
